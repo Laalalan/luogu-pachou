@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>题目筛选</title>
+  <style>
+    /* 可根据需要进行样式设置 */
+  </style>
+</head>
+<body>
+  <h1>题目筛选</h1>
+
+  <label for="difficulty">题目难度：</label>
+  <select id="difficulty">
+    <option value="">不限</option>
+    <option value="暂无评定入门">暂无评定入门</option>
+    <option value="普及-">普及-</option>
+    <option value="普及/提高-">普及/提高-</option>
+    <option value="普及+/提高">普及+/提高</option>
+    <option value="提高+/省选-">提高+/省选-</option>
+    <option value="省选/NOI-">省选/NOI-</option>
+    <option value="NOI/NOI+/CTSC">NOI/NOI+/CTSC</option>
+  </select>
+
+  <label for="keywords">关键词：</label>
+  <input type="text" id="keywords">
+
+  <button id="filterBtn">筛选</button>
+
+  <div id="result">
+    <!-- 这里动态展示经过筛选后的题目 -->
+  </div>
+
+  <script>
+    const filterBtn = document.getElementById('filterBtn');
+    filterBtn.addEventListener('click', filterProblems);
+
+    function filterProblems() {
+      const difficulty = document.getElementById('difficulty').value;
+      const keywords = document.getElementById('keywords').value;
+
+      // 在这里执行相应的筛选逻辑和数据展示操作
+      // 可以使用 JavaScript 发送请求，调用后端 API，或者操作内存中的题目数据等
+    }
+  </script>
+</body>
+</html>
